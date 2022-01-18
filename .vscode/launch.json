@@ -1,0 +1,43 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "name": "Export TestRail",
+          "type": "python",
+          "request": "launch",
+          "module": "pytest",
+          "args": [
+              "tests/testrail/test_export_features.py"
+          ]
+      },
+      {
+          "name": "Generate Data",
+          "type": "python",
+          "request": "launch",
+          "module": "pytest",
+          "args": [
+              "tests/data_generator"
+          ]
+      },
+      {
+          "name": "Automation",
+          "type": "python",
+          "request": "launch",
+          "module": "pytest",
+          "args": [
+              "-k",
+              "to_review",
+              "--remote=false",
+              "--ipenv=localhost",
+              "--headless=false",
+              "--cucumberjson=test-results/json/result.json",
+              "--cucumberjson-expanded",
+              "--gherkin-terminal-reporter",
+              "--export_results=false",
+              "--junitxml=test-results/result.xml"
+          ],
+          "env": {
+          }
+      }
+  ]
+}

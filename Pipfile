@@ -26,7 +26,6 @@ Naked = "==0.1.31"
 iniconfig = "*"
 # pytest-bdd different from official repository due to of 2 features:
 # attach screenshot on json result and pass datatable on step definition
-pytest-bdd = { git = "https://github.com/robsonpolicarpo/pytest-bdd.git", editable = true, ref = "master" }
 [dev-packages]
 [requires]
 python_version = "3.8"
